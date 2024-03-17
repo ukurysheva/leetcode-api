@@ -21,7 +21,17 @@ type TopicTag struct {
 	Slug string `json:"slug"`
 }
 
+type QuestionsListData struct {
+	QuestionList QuestionList `json:"problemsetQuestionList"`
+}
+
 type QuestionList struct {
 	Total     int        `json:"total"`
 	Questions []Question `json:"questions"`
+}
+
+type QuestionContent struct {
+	Raw      string `json:"content"`
+	Text     string
+	Examples []string
 }
